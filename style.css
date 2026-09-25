@@ -1,14 +1,37 @@
+* { box-sizing: border-box; }
+
 body {
   font-family: Arial, sans-serif;
   background-color: #faf5ec;
   color: #333;
   margin: 0;
   text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 h1, h2, h3 {
   font-family: Georgia, serif;
   color: #b1495a;
+}
+
+a:focus, button:focus {
+  outline: 3px solid #b1495a;
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: #b1495a;
+  color: white;
+  padding: 10px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 10px;
 }
 
 nav {
@@ -18,8 +41,10 @@ nav {
 
 nav a {
   margin: 0 10px;
+  padding: 8px;
   text-decoration: none;
   color: #333;
+  display: inline-block;
 }
 
 .logo {
@@ -49,6 +74,11 @@ section {
   width: 200px;
   border-radius: 8px;
   vertical-align: top;
+}
+
+.seasonal-img {
+  width: 250px;
+  border-radius: 8px;
 }
 
 footer {
